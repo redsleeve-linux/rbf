@@ -10,7 +10,7 @@
         <installer>yum</installer>
         <releasever>7</releasever>
         <group>core</group>
-        <package>chrony,raspberrypi-config,raspberrypi-firmware,raspberrypi-kernel,raspberrypi-kernel-firmware,rng-tools,selinux-policy-targeted,linux-firmware,NetworkManager-wifi,bcm43xx-firmware</package>
+        <package>raspberrypi-config,raspberrypi-firmware,raspberrypi-kernel,raspberrypi-kernel-firmware,linux-firmware,bcm43xx-firmware</package>
     </packages>
 
     <stage1loader>none</stage1loader>

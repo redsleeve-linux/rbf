@@ -25,4 +25,7 @@ dd if=/dev/zero of=$ROOTPATH/boot/zero
 sync
 rm -f $ROOTPATH/zero $ROOTPATH/boot/zero
 
+echo "fix ppp install issue"
+mkdir -p $ROOTPATH/run/lock/ppp
+
 exit 0
