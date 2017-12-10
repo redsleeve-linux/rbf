@@ -1,0 +1,47 @@
+<template>    
+    <board>rock64</board>
+    <image size="2G" type="raw" path="rock64-redsleeve-image.img"></image>
+    <partitions>
+        <partition size="256M" type="primary" fs="vfat" mountpoint="/boot"></partition>
+        <partition size="1775M" type="primary" fs="ext4" mountpoint="/"></partition>
+    </partitions>
+    
+    <packages>
+        <installer>yum</installer>
+        <releasever>7</releasever>
+        <group>core</group>
+        <package>rock64-kernel,gdisk</package>
+    </packages>
+
+    <stage1loader>none</stage1loader>
+    <uboot>none</uboot>
+    <rootfiles>files/rock64/extlinux.conf</rootfiles>
+    <firmware>none</firmware>
+    <kernel type="none"></kernel>    
+
+    <config>
+        <hostname>rock64</hostname>
+        <selinux>disabled</selinux>
+        <rootpass>password1234</rootpass>
+        <rootsshkey>none</rootsshkey>
+        <network>
+            <interface name="eth0" config="dhcp">
+            </interface>
+        </network>        
+    </config>
+    
+    <etcoverlay>./etc</etcoverlay>
+    <finalizescript>./boards.d/finalize.sh</finalizescript>
+    
+    <distro>redsleeve</distro>
+    <repos>
+        <repo name="base" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/base/"></repo>
+        <repo name="updates" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/updates/"></repo>
+        <repo name="extra" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/extra/"></repo>
+        <repo name="pine64" path="ftp://raspi-dmz/CentOS7/pine64/"></repo>
+    </repos>
+    <workdir>/tmp/temp</workdir>
+    <extlinuxconf>false</extlinuxconf>
+    
+ </template>
+ 
