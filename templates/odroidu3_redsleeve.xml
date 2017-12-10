@@ -1,9 +1,9 @@
-<!---
+<!--
 
   Important: set PARTITION_BEGIN to 3072 before making this image
   otherwise uboot artifacts are overwritten
 
----!>
+-->
 <template>    
     <board>odroidu3</board>
     <image size="1G" type="raw" path="odroidu3-redsleeve-image.img"></image>
@@ -16,7 +16,7 @@
         <installer>yum</installer>
         <releasever>7</releasever>
         <group>core</group>
-        <package>odroidu3-kernel,odroid-config,dosfstools</package>
+        <package>odroidu3-kernel,odroid-config</package>
     </packages>
 
     <stage1loader>none</stage1loader>

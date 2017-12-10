@@ -10,7 +10,7 @@
         <installer>yum</installer>
         <releasever>7</releasever>
         <group>core</group>
-        <package>odroidxu3-kernel,odroid-config,dosfstools,selinux-policy-targeted</package>
+        <package>odroidxu3-kernel,odroid-config</package>
     </packages>
 
     <stage1loader>none</stage1loader>

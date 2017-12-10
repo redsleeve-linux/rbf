@@ -10,7 +10,7 @@
         <installer>yum</installer>
         <releasever>7</releasever>
         <group>core</group>
-        <package>odroidc2-kernel,odroid-config,dosfstools,chrony,rng-tools</package>
+        <package>odroidc2-kernel,odroid-config</package>
     </packages>
 
     <stage1loader>files/odroidc2/bl1.bin.hardkernel</stage1loader>
@@ -21,7 +21,7 @@
 
     <config>
         <hostname>odroidc2</hostname>
-        <selinux>enforcing</selinux>
+        <selinux>disabled</selinux>
         <rootpass>password1234</rootpass>
         <rootsshkey>none</rootsshkey>
         <network>
@@ -39,6 +39,7 @@
         <repo name="updates" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/updates/"></repo>
         <repo name="extra" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/extra/"></repo>
         <repo name="odroid" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/odroid/"></repo>
+        <repo name="odroid" path="ftp://raspi-dmz/CentOS7/odroid/"></repo>
     </repos>
     <workdir>/tmp/temp</workdir>
     <extlinuxconf>false</extlinuxconf>

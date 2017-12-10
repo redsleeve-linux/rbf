@@ -24,6 +24,9 @@ mkimage -T script -A arm -C none -n 'RedSleeve Boot Script for U3' -d $ROOTPATH/
 echo "remove rbf repos"
 rm $ROOTPATH/etc/yum.repos.d/*_rbf.repo
 
+echo "remove yum cache"
+rm -rf $ROOTPATH/var/cache/yum/*
+
 echo "zero the disks freespace"
 dd if=/dev/zero of=$ROOTPATH/zero
 dd if=/dev/zero of=$ROOTPATH/boot/zero

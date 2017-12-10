@@ -10,7 +10,7 @@
         <installer>yum</installer>
         <releasever>7</releasever>
         <group>core</group>
-        <package>odroidxu4-kernel,odroid-config,dosfstools,selinux-policy-targeted</package>
+        <package>odroidxu4-kernel,odroid-config</package>
     </packages>
 
     <stage1loader>none</stage1loader>
@@ -35,16 +35,11 @@
     
     <distro>redsleeve</distro>
     <repos>
-        <repo name="base" path="ftp://raspi-dmz/Redsleeve7/7/base/"></repo>
-        <repo name="updates" path="ftp://raspi-dmz/Redsleeve7/7/updates/"></repo>
-        <repo name="extra" path="ftp://raspi-dmz/Redsleeve7/7/extra/"></repo>
-        <repo name="odroid" path="ftp://raspi-dmz/Redsleeve7/odroid/"></repo>
-<!--
-             <repo name="base" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/base/"></repo>
+        <repo name="base" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/base/"></repo>
         <repo name="updates" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/updates/"></repo>
         <repo name="extra" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/7/extra/"></repo>
         <repo name="odroid" path="http://www.mirrorservice.org/sites/ftp.redsleeve.org/pub/el7-devel/el7/odroid/"></repo>
--->
+        <repo name="odroid" path="ftp://raspi-dmz/Redsleeve7/odroid/"></repo>
     </repos>
     <workdir>/tmp/temp</workdir>
     <extlinuxconf>false</extlinuxconf>
